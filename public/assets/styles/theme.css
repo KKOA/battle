@@ -1,0 +1,91 @@
+
+body
+{
+  background:#000009;
+  background-image: url(../../assets/imgs/begin.jpg);
+  /*background-position-x: 0;*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.center
+{
+  width:50%; margin:0 auto
+}
+
+form.begin
+{
+  width:500px;
+  border-radius:5px;
+  padding: 10px;
+  /*box-shadow: 5px 5px 5px #888888;*/
+  /*box-shadow: 5px 5px 5px #333333;*/
+  box-shadow: -5px 5px 5px rgba(8,116,171,0.7);
+  margin:50px auto 0 auto;
+  display:block;
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, rgba(248,103,2,0.5) , rgba(8,116,171,0.5)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, rgba(248,103,2,0.5), rgba(8,116,171,0.5)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, rgba(248,103,2,0.5), rgba(8,116,171,0.5)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, rgba(248,103,2,0.5) , rgba(8,116,171,0.5)); /* Standard syntax */
+  /*rgba(8,116,171,0.7)
+  rgba(248,103,2,0.7)*/
+}
+
+ form.begin h1
+ {
+   text-align: center;
+   text-transform: uppercase;
+   font-family: 'Amaranth', sans-serif;
+   color: rgba(255,75,2,1);
+   text-shadow: 2px 2px rgba(8,116,171,1)
+ }
+
+ .input_group
+ {
+   margin:20px 10px;
+ }
+
+.begin label
+{
+  text-transform: uppercase;
+  display:inline-block;
+  padding-right:5px;
+  font-weight:bold;
+  letter-spacing: 1px;
+}
+
+.begin input[type="text"]
+{
+  font-size: 15px;
+  width:75%;
+  letter-spacing: 1px;
+  padding:5px;
+  font-weight:bold;
+  background:rgba(255,255,255,0.5);
+  max-width: 330px;
+  /*set makes character length*/
+}
+
+.begin input[type="button"]
+{
+  -webkit-appearance: button;
+  display:block;
+  width:40%;
+  height:50px;
+  font-size:20px;
+  margin: 30px auto;
+  background:rgba(187,187,187,0.3);
+  border-radius:10px;
+  text-shadow: 1px 1px #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.begin input[type="button"]:hover
+{
+  background:#1479CC;
+  background:rgba(20,121,204,0.3);
+  color:white;
+  text-shadow: 1px 1px #000;
+}
