@@ -8,20 +8,20 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    session[:player1] = params[:player1_name]
-    session[:player2] = params[:player2_name]
+    $player1 = params[:player1_name]
+    $player2 = params[:player2_name]
     redirect('/play')
   end
 
   get '/play' do
-    @player1 = session[:player1]
-    @player2 = session[:player2]
+    @player1 = $player1
+    @player2 = $player2
     erb(:play)
   end
 
   get '/attack' do
-    @player1 = session[:player1]
-    @player2 = session[:player2]
+    @player1 = $player1
+    @player2 = $player2
     erb(:attack)
   end
   # start the server if ruby file executed directly
