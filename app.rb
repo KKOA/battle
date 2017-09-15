@@ -1,6 +1,6 @@
 # my_app.rb
 require 'sinatra/base'
-require 'player'
+require './lib/player'
 
 class Battle < Sinatra::Base
   set :sessions, true
