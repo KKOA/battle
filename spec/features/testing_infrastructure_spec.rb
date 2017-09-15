@@ -27,10 +27,7 @@ feature 'Attack other player' do
     click_link 'Attack'
     expect(page).to have_content('Jenkings attacked Rory')
   end
-end
-
-feature 'Attack other player' do
-  scenario 'confirmation of attack' do
+  scenario 'confirmation damage dealt' do
     sign_in_and_play
     click_link 'Attack'
     click_link 'ok'
