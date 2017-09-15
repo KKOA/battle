@@ -13,4 +13,12 @@ describe Player do
     end
   end
 
+  describe '#attack' do
+    it 'deal damage to opponent' do
+      player1 = Player.new('Tom')
+      player2 = Player.new('Mary')
+      player1.attack(player2)
+      expect(player2.hp).to eq 50
+    end
+  end
 end
