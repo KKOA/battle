@@ -9,7 +9,7 @@ end
 
 feature 'Enter names' do
   scenario 'return player names' do
-  sign_in_and_play
+    sign_in_and_play
     expect(page).to have_content('Jenkings vs Rory')
   end
 end
@@ -20,6 +20,7 @@ feature 'View oppenent HP' do
     expect(page).to have_content('Rory 60Hp')
   end
 end
+
 feature 'Attack other player' do
   scenario 'confirmation of attack' do
     sign_in_and_play
