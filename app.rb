@@ -1,5 +1,6 @@
 # my_app.rb
 require 'sinatra/base'
+require 'player'
 
 class Battle < Sinatra::Base
   set :sessions, true
@@ -8,8 +9,8 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    $player1 = params[:player1_name]
-    $player2 = params[:player2_name]
+    $player1 = Player.new(params[:player1_name])
+    $player2 = Player.new(params[:player2_name])
     redirect('/play')
   end
 
