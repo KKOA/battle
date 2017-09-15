@@ -67,7 +67,7 @@ form.begin
   /*set makes character length*/
 }
 
-.begin input[type="button"]
+.begin input[type="submit"]
 {
   -webkit-appearance: button;
   display:block;
