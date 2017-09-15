@@ -6,6 +6,7 @@ body
   /*background-position-x: 0;*/
   background-repeat: no-repeat;
   background-size: cover;
+  color:white;
 }
 
 .center
@@ -53,6 +54,7 @@ form.begin
   padding-right:5px;
   font-weight:bold;
   letter-spacing: 1px;
+  color:#000;
 }
 
 .begin input[type="text"]
@@ -82,7 +84,7 @@ form.begin
   text-transform: uppercase;
 }
 
-.begin input[type="button"]:hover
+.begin input[type="submit"]:hover
 {
   background:#1479CC;
   background:rgba(20,121,204,0.3);
