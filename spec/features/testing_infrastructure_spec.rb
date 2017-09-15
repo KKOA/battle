@@ -31,6 +31,6 @@ feature 'Attack other player' do
     sign_in_and_play
     click_link 'Attack'
     click_link 'ok'
-    expect(page).to have_content 'Rory 50HP'
+    expect(page).to have_content 'Rory 50Hp'
   end
 end
