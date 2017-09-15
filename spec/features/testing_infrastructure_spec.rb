@@ -20,3 +20,9 @@ feature 'View oppenent HP' do
     expect(page).to have_content('Rory 60Hp')
   end
 end
+feature 'Attack other player' do
+  scenario 'confirmation of attack' do
+    sign_in_and_play
+    expect(page).to have_content('Jenkins attack Rory')
+  end
+end
