@@ -17,7 +17,7 @@ end
 feature 'View oppenent HP' do
   scenario 'return othe player hp' do
     sign_in_and_play
-    expect(page).to have_content('Rory 60Hp')
+    expect(page).to have_content('Rory 60 / 100 HP')
   end
 end
 
@@ -31,6 +31,6 @@ feature 'Attack other player' do
     sign_in_and_play
     click_link 'Attack'
     click_link 'ok'
-    expect(page).to have_content 'Rory 50Hp'
+    expect(page).to have_content 'Rory 50 / 100 HP'
   end
 end

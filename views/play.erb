@@ -1,4 +1,111 @@
-<header><%= @player1.name  %> vs <%= @player2.name %></header>
-<%= @player2.name %> <%= @player2.hp %>Hp
+<link rel="stylesheet" type="text/css" href="assets/styles/theme.css">
+<div class="container">
+  <div class="row opponent_display">
+    <div class="col-sm-4">
+      <div class="player_name"><%= $player2.name %></div>
+      <figure>
+        <!-- <img src="/public/assets/imgs/image.jpg"> -->
 
-<a href="/attack">Attack</a>
+        <img src="/assets/imgs/monster1.png" class="player_pic">
+        <figcaption>
+          <div class="hp_text"><%= $player2.hp %> / 100 HP</div>
+          <div class="progress hp_bar_container">
+              <div class="progress-bar hp_bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="col-sm-8">
+      <h1 class="play_title"><%= $player1.name %> vs <%= $player2.name %></h1>
+    </div>
+  </div>
+  <div class="row you_display">
+    <div class="col-sm-8">
+      <div class="action_group">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="action attack">
+            <a href="/attack" >
+              <figure>
+                <img src="/assets/imgs/Crossed_Swords.png">
+                <figcaption>
+                  Attack
+                </figcaption>
+              </figure>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="action poison">
+            <a href="" height="95px">
+              <figure>
+                <img src="/assets/imgs/poison_potion.png" style="width:30px" >
+                <figcaption>
+                  Poison
+                </figcaption>
+              </figure>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="action stun">
+            <a href="" >
+              <figure>
+                <img src="/assets/imgs/stun.png">
+                <figcaption>
+                  Stun
+                </figcaption>
+              </figure>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-4">
+          <div class="action potion">
+            <a href="" >
+              <figure>
+                <img src="/assets/imgs/heal_potionV2.png">
+                <figcaption>
+                  Potion
+                </figcaption>
+              </figure>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="action Antidote">
+            <a href="" >
+              <figure>
+                <img src="/assets/imgs/antidoteV2.png">
+                <figcaption>
+                  Antidote
+                </figcaption>
+              </figure>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="player_name"><%= $player1.name %></div>
+      <figure>
+        <!-- <img src="/public/assets/imgs/image.jpg"> -->
+
+        <img src="/assets/imgs/monster2.png" class="player_pic">
+        <figcaption>
+          <div class="hp_text"><%= $player1.hp %> / 100 HP</div>
+          <!-- <progress value="70" max="100"class="hp_bar">70 %</progress> -->
+          <div class="progress hp_bar_container">
+              <div class="progress-bar hp_bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
