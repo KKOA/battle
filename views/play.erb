@@ -2,13 +2,13 @@
 <div class="container">
   <div class="row opponent_display">
     <div class="col-sm-4 col-lg-3">
-      <div class="player_name"><%= $player2.name %></div>
+      <div class="player_name"><%= @player2.name %></div>
       <figure>
         <!-- <img src="/public/assets/imgs/image.jpg"> -->
 
         <img src="/assets/imgs/monster1.png" class="player_pic">
         <figcaption>
-          <div class="hp_text"><%= $player2.hp %> / 100 HP</div>
+          <div class="hp_text"><%= @player2.hp %> / 100 HP</div>
           <div class="progress hp_bar_container">
               <div class="progress-bar hp_bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
@@ -16,7 +16,7 @@
       </figure>
     </div>
     <div class="col-sm-8 col-lg-9">
-      <h1 class="play_title"><%= $player1.name %> vs <%= $player2.name %></h1>
+      <h1 class="play_title"><%= @player1.name %> vs <%= @player2.name %></h1>
     </div>
   </div>
   <div class="row you_display">
@@ -93,13 +93,13 @@
     </div>
     </div>
     <div class="col-sm-4 col-lg-3">
-      <div class="player_name"><%= $player1.name %></div>
+      <div class="player_name"><%= @player1.name %></div>
       <figure>
         <!-- <img src="/public/assets/imgs/image.jpg"> -->
 
         <img src="/assets/imgs/monster2.png" class="player_pic">
         <figcaption>
-          <div class="hp_text"><%= $player1.hp %> / 100 HP</div>
+          <div class="hp_text"><%= @player1.hp %> / 100 HP</div>
           <!-- <progress value="70" max="100"class="hp_bar">70 %</progress> -->
           <div class="progress hp_bar_container">
               <div class="progress-bar hp_bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
