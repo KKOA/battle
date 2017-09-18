@@ -9,6 +9,12 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
+    p params[:player1_name] , params[:player2_name]
+    if(params[:player1_name] == '' || params[:player2_name] == '')
+      session['err'] = 'Player name cannot be empty'
+      redirect('/')
+    end
+    p params[:player1_name]
     $player1 = Player.new(params[:player1_name])
     $player2 = Player.new(params[:player2_name])
     redirect('/play')

@@ -7,11 +7,19 @@ feature 'homepage' do # describe
   end
 end
 
+
 feature 'Enter names' do
   scenario 'return player names' do
     sign_in_and_play
     expect(page).to have_content('Jenkings vs Rory')
   end
+
+  scenario 'name missing' do
+    visit('/')
+    click_button('Battle')
+    expect(page).to have_content 'Player name cannot be empty'
+  end
+
 end
 
 feature 'View oppenent HP' do
@@ -27,6 +35,7 @@ feature 'Attack other player' do
     click_link 'Attack'
     expect(page).to have_content('Jenkings attacked Rory')
   end
+
   scenario 'confirmation damage dealt' do
     sign_in_and_play
     click_link 'Attack'

@@ -85,6 +85,11 @@ form.begin
     <div class=col-sm-6>
       <form class="begin" action="/names" method="post">
         <h1> Enter your names to do <br>!! Battle !!</h1>
+        <% if(session['err']) %>
+          <%= session['err'] %>
+          <% session['err'] = nil %>
+        <% end %>
+
         <div class ="form-group row">
           <label for="player1_name" class="col-3 col-form-label">Player 1 :  </label>
           <div class="col-9">
