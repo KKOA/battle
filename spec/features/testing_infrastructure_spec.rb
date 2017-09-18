@@ -7,7 +7,6 @@ feature 'homepage' do # describe
   end
 end
 
-
 feature 'Enter names' do
   scenario 'return player names' do
     sign_in_and_play
@@ -19,7 +18,6 @@ feature 'Enter names' do
     click_button('Battle')
     expect(page).to have_content 'Player name cannot be empty'
   end
-
 end
 
 feature 'View oppenent HP' do

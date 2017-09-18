@@ -9,12 +9,10 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    p params[:player1_name] , params[:player2_name]
-    if(params[:player1_name] == '' || params[:player2_name] == '')
+    if (params[:player1_name] == '' || params[:player2_name] == '')
       session['err'] = 'Player name cannot be empty'
       redirect('/')
     end
-    p params[:player1_name]
     $player1 = Player.new(params[:player1_name])
     $player2 = Player.new(params[:player2_name])
     redirect('/play')
@@ -30,7 +28,7 @@ class Battle < Sinatra::Base
 
     @player1 = $player1
     @player2 = $player2
-    @player1.attack(@player2)
+    Game.new.attack(@player2)
     erb(:attack)
   end
   # start the server if ruby file executed directly
