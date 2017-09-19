@@ -22,4 +22,38 @@ describe Game do
       expect(game.player2).to eq player2
     end
   end
+
+  describe '#current_turn' do
+    it 'return current player\'s turn' do
+      expect(game.current_turn).to eq player1
+    end
+  end
+
+  describe '#swap_turn' do
+    it 'return other player\'s turn' do
+      game.swap_turn
+      expect(game.current_turn).to eq player2
+    end
+  end
+
+  describe '#swap_turn' do
+    it 'return other player\'s turn' do
+      4.times { game.swap_turn }
+      expect(game.current_turn).to eq player1
+    end
+  end
+
+  describe '#opponent' do
+    context 'no swaps' do
+      it 'return oppponent' do
+        expect(game.opponent).to eq player2
+      end
+    end
+    context 'after player swaps' do
+      it 'return oppponent' do
+        3.times { game.swap_turn }
+        expect(game.opponent).to eq player1
+      end
+    end
+  end
 end
