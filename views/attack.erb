@@ -1,4 +1,11 @@
-<%= @player1.name %> attacked <%= @player2.name %><br>
+<%= $game.current_turn.name %><br>
+<%= @player1 %><br>
+<% if($game.current_turn.name == @player1.name) %>
+  <%= @player1.name %> attacked <%= @player2.name %><br>
+<% else %>
+  <%= @player2.name %> attacked <%= @player1.name %><br>
+<% end %>
 <a href="/play">ok</a>
-
-<%= $game.current_turn.name %>'s turn
+<form action="/swap" method="post">
+  <input type="submit" value="ok">
+</form>
