@@ -41,3 +41,25 @@ feature 'Attack other player' do
     expect(page).to have_content 'Rory 50 / 100 HP'
   end
 end
+
+feature 'See current players' do
+  scenario 'return player turn' do
+    sign_in_and_play
+    expect(page).to have_content 'Jenkings\'s turn'
+  end
+end
+
+feature 'switch turn' do
+  scenario 'return player2' do
+    sign_in_and_play
+    click_link 'Attack'
+    expect(page).to have_content 'Rory\'s turn'
+  end
+  scenario 'return player1' do
+    sign_in_and_play
+    click_link 'Attack'
+    click_link 'ok'
+    click_link 'Attack'
+    expect(page).to have_content 'Jenkings\'s turn'
+  end
+end
