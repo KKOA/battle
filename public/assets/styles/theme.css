@@ -56,9 +56,12 @@ body
 .play_title
 {
   font-size:30px;
+  margin-top:10px;
+}
+.turn,.play_title
+{
   text-align: right;
   margin-right:20px;
-  margin-top:10px;
 }
 
 .action_group

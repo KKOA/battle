@@ -10,13 +10,14 @@
         <figcaption>
           <div class="hp_text"><%= @player2.hp %> / 100 HP</div>
           <div class="progress hp_bar_container">
-              <div class="progress-bar hp_bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar hp_bar" role="progressbar" style="width: <%= @player2.hp %>%;" aria-valuenow="<%= @player2.hp %>" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
         </figcaption>
       </figure>
     </div>
     <div class="col-sm-8 col-lg-9">
       <h1 class="play_title"><%= @player1.name %> vs <%= @player2.name %></h1>
+      <h3 class='turn'><%= $game.current_turn.name %>'s turn</h3>
     </div>
   </div>
   <div class="row you_display">
@@ -102,7 +103,7 @@
           <div class="hp_text"><%= @player1.hp %> / 100 HP</div>
           <!-- <progress value="70" max="100"class="hp_bar">70 %</progress> -->
           <div class="progress hp_bar_container">
-              <div class="progress-bar hp_bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar hp_bar" role="progressbar" style="width: <%= @player1.hp %>%;" aria-valuenow="<%= @player1.hp %>" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
         </figcaption>
       </figure>

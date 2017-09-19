@@ -30,7 +30,9 @@ class Battle < Sinatra::Base
 
     @player1 = $game.player1
     @player2 = $game.player2
-    $game.attack(@player2)
+    $game.attack($game.opponent)
+    # $game.attack(@player2)
+    $game.swap_turn
     erb(:attack)
   end
   # start the server if ruby file executed directly
